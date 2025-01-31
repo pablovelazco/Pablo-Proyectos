@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Sistema de Gestión Hospitalaria</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/responsiveslides.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="js/responsiveslides.min.js"></script>
+    <script>
+        $(function () {
+            $("#slider1").responsiveSlides({
+                maxwidth: 1600,
+                speed: 600
+            });
+        });
+
+        // Mostrar formulario de contacto al hacer clic en "Contacto"
+        function mostrarFormulario() {
+            document.getElementById('contenido-principal').style.display = 'none';
+            document.getElementById('formulario-contacto').style.display = 'block';
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f7ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .header .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .header .top-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .header .top-nav ul li {
+            display: inline;
+        }
+
+        .header .top-nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .header .top-nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .content-grids .listview_1_of_3 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .content-grids .listview_1_of_3 img {
+            max-width: 80px;
+            margin: 0 auto;
+        }
+
+        .content-grids .listview_1_of_3 h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .button span a {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .button span a:hover {
+            background-color: #0056b3;
+        }
+
+        .footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .form-container h3 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!--start-wrap-->
+    <div class="header">
+        <div class="wrap">
+            <div class="logo">
+                <a href="index.html" style="font-size: 30px;">Sistema de Gestión Hospitalaria</a>
+            </div>
+            <div class="top-nav">
+                <ul>
+                    <li class="active"><a href="index.html">Inicio</a></li>
+                    <li><a href="javascript:mostrarFormulario();">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="contenido-principal">
+        <!--start-image-slider---->
+        <div class="image-slider">
+            <ul class="rslides" id="slider1">
+                <li><img src="images/slider-image1.jpg" alt=""></li>
+                <li><img src="images/slider-image2.jpg" alt=""></li>
+                <li><img src="images/slider-image1.jpg" alt=""></li>
+            </ul>
+        </div>
+        <!--End-image-slider---->
+
+        <div class="content-grids">
+            <div class="wrap">
+                <div class="section group">
+                    <div class="listview_1_of_3 images_1_of_3">
+                        <img src="images/grid-img3.png" alt="Pacientes">
+                        <h3>Pacientes</h3>
+                        <p>Registrarse y Reservar Cita</p>
+                        <div class="button"><span><a href="hms/user-login.php">Haz clic aquí</a></span></div>
+                    </div>
+                    <div class="listview_1_of_3 images_1_of_3">
+                        <img src="images/grid-img1.png" alt="Médicos">
+                        <h3>Acceso de Médicos</h3>
+                        <div class="button"><span><a href="hms/doctor/">Haz clic aquí</a></span></div>
+                    </div>
+                    <div class="listview_1_of_3 images_1_of_3">
+                        <img src="images/grid-img2.png" alt="Administrador">
+                        <h3>Acceso de Administrador</h3>
+                        <div class="button"><span><a href="hms/admin">Haz clic aquí</a></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="formulario-contacto" style="display:none;">
+        <div class="form-container">
+            <h3>Contacto</h3>
+            <form>
+                <input type="text" name="nombre" placeholder="Nombre completo" required>
+                <input type="email" name="email" placeholder="Correo electrónico" required>
+                <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="javascript:mostrarFormulario();">Contacto</a></li>
+        </ul>
+    </div>
+    <!--end-wrap-->
+</body>
+</html>
